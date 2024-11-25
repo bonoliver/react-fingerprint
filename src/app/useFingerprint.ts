@@ -97,6 +97,10 @@ export const useFingerprint = (
 
   const handleKeydown = useCallback(
     (event: KeyboardEvent<HTMLInputElement>, row: number, col: number) => {
+      if (event.metaKey || event.ctrlKey) {
+        return;
+      }
+
       if (event.key.length === 1 && /^[A-Za-z0-9]$/.test(event.key)) {
         event.preventDefault();
         const newFingerprint = structuredClone(fingerprintGrid);
