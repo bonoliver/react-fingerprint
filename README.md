@@ -1,4 +1,4 @@
-##React Fingerprint
+## React Fingerprint
 
 Used create-next-app but wouldn't need to be used with next.js of course.
 
